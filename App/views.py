@@ -32,6 +32,7 @@ def login(request):
         user.username = request.POST.get('username')
         user.password = request.POST.get('password')
         user.tel = request.POST.get('tel')
+        #随即获取不同的token，使token不唯一，用户名才能覆盖登陆
         user.token = uuid.uuid5(uuid.uuid4(), 'login')
 
         #存入数据库
@@ -63,18 +64,20 @@ def register(request):
 
             #重定向
             response = redirect('app:index')
-            #设置cookie
-            # response.set_cookie('username',username)
+           #uuid获取不同的token，用户名才会覆盖
             user.token = uuid.uuid5(uuid.uuid4(), 'register')
+            # 设置cookie
+            # response.set_cookie('username',username)
             response.set_cookie('token', user.token)
             user.save()
             return response
         else: #不存在
             return HttpResponse('用户名或密码错误')
 
-
+#退出登陆
 def logout(request):
     response = redirect('app:index')
+    #删除token
     response.delete_cookie('token')
 
     return response
