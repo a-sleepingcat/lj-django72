@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'djngo72.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django72',
+        'NAME': 'ljdjango72',
         'USER':'root',
         'PASSWORD':'123456',
         'HOET':'127.0.0.1',

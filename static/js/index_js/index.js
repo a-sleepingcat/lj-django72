@@ -42,32 +42,32 @@ onload = function(){
 	function $(id){
 		return document.getElementById(id);
 	}
-	ajax({
-		url:"json/lunbo.json",
-		data:{},
-		success: function(data){
-			var arr = JSON.parse(data);
-			for (var i=0; i<arr.length; i++) {
-				var obj = arr[i];
-				
-				//创建li节点
-				var li = document.createElement("li");   
-				$("list5").appendChild(li);
-				li.innerHTML = "<a href='#'><img src="+ obj.img +"></a>";
-				var li2 = document.createElement("li");
-				$("list6").appendChild(li2);
-				if (i == 0) {
-					li2.className = "active";
-				}
-			}
-			
-			//轮播
-			lunbo();
-		}
-	})
+	// ajax({
+	// 	url:"json/lunbo.json",
+	// 	data:{},
+	// 	success: function(data){
+	// 		var arr = JSON.parse(data);
+	// 		for (var i=0; i<arr.length; i++) {
+	// 			var obj = arr[i];
+	//
+	// 			//创建li节点
+	// 			var li = document.createElement("li");
+	// 			$("list5").appendChild(li);
+	// 			li.innerHTML = "<a href='#'><img src="+ obj.img +"></a>";
+	// 			var li2 = document.createElement("li");
+	// 			$("list6").appendChild(li2);
+	// 			if (i == 0) {
+	// 				li2.className = "active";
+	// 			}
+	// 		}
+	//
+	// 		//轮播
+	// 		lunbo();
+	// 	}
+	// })
 	
 	
-	//lunbo();
+	lunbo();
 	//轮播
 	function lunbo(){
 	

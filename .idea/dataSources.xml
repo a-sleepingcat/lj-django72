@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="django72@localhost" uuid="64977491-96d5-4c53-9f19-0e57ca9ebd66">
+    <data-source source="LOCAL" name="ljdjango72@localhost" uuid="15dfe131-3409-4857-81a0-1935c525a1f7">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/django72</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/ljdjango72</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

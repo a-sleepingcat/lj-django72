@@ -1,16 +1,17 @@
+{% load  static %}
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="../css/index_css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/index_css/index.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/register_css/register.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/mycat.css/mycat.css"/>
-		<script src="/js/index_js/jquery-1.12.3.js"></script>
-		<script src="/js/index_js/jquery.cookie.js"></script>
-		<script src="/js/mycat.js/mycat.js"></script>
-         <script src="{% static 'js/test.js' %}"></script>
+		<link rel="stylesheet" type="text/css" href="/static/css/index_css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/index_css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/register_css/register.css"/>
+		<link rel="stylesheet" type="text/css" href="/sattic/css/mycat.css/mycat.css"/>
+		<script src="/static/js/index_js/jquery-1.12.3.js"></script>
+		<script src="/static/js/index_js/jquery.cookie.js"></script>
+		<script src="/static/js/mycat.js/mycat.js"></script>
+
 	</head>
 	<body>
 		<div id="register">
@@ -23,13 +24,13 @@
 				</ul>
 				<ul id="list2">
 					<li>您好,欢迎来到七加二商城！</li>
-					<li><a href="register.html">[登录]</a></li>
-					<li><a  href="login.html">[注册]</li>
+					<li><a href="{% url 'app:register' %}">[登录]</a></li>
+					<li><a  href="{% url 'app:login' %}">[注册]</a></li>
 					<li class="qq"><a href="#"></a></li>
 					<li class="weibo"><a href="#"></a></li>
 					<li class="kuan"><a href="#">我的订单</a></li>
-					<li class="kuan"><a  href="#">站内消息 </li>
-					<li class="kuan"><a  href="#">帮助中心</li>
+					<li class="kuan"><a  href="#">站内消息 </a></li>
+					<li class="kuan"><a  href="#">帮助中心 </a></li>
 				</ul>
 
 			</div>
@@ -38,11 +39,11 @@
 		<div id="logo">
 			<div class="center">
 				<div class="logo_left">
-					<a href="index.html"><img src="/images/mycat_images/201511170959056304.png"/></a>
+					<a href="index.html"><img src="/static/images/mycat_images/201511170959056304.png"/></a>
 				</div>
 				<div class="logo_center" id="lct">
 					<div class="triangle"></div>
-					<img src="/images/index_images/logo/search.png"/>
+					<img src="/static/images/index_images/logo/search.png"/>
 					<form>
 						<input type="text" class="ipt1" />
 						<input type="submit" value="搜索" class="ipt2"/>
@@ -92,14 +93,14 @@
 					</ul>
 				</div>
 				<div id="mycat_f">
-					<img src="/images/mycat_images/pic_03.png" />
+					<img src="/static/images/mycat_images/pic_03.png" />
 				</div>
 
 			</div>
 		</div>
 		<div id="msg">
 			<div class="center">
-				<img src="/images/mycat_images/foot_green.jpg"/>
+				<img src="/static/images/mycat_images/foot_green.jpg"/>
 			</div>
 
 		</div>
@@ -179,24 +180,24 @@
 		</div>
 		<!--footer-->
 		<div id="footer">
-			<img src="/images/index_images/donkey .png" class="donkey"/>
+			<img src="/static/images/index_images/donkey .png" class="donkey"/>
 			<p>Copyright©2004-2016 7jia2.com 天津七迦二科技有限公司 版权所有 ICP备案证书号:津ICP备14004534号-1 ICP证 津B2-20150003</p>
 			<p>七加二提醒您购买户外保险 保障出行安全 匿名举报和网站建议直通车 CEO邮箱：marketing001@7jia2.com</p>
 			<p>七迦二旗下网站：metasolo源一云商 装备酷</p>
-			<img src="/images/index_images/cnnic.png" />
-			<img src="/images/index_images/baidu.png" />
+			<img src="/static/images/index_images/cnnic.png" />
+			<img src="/static/images/index_images/baidu.png" />
 		</div>
 		<!---->
 		<div id="fxdc">
 			<div class="fxdc_left">
 				<ul>
-				<li><a href="index.html"><img src="/images/register_images/wechat-pic.png">
+				<li><a href="index.html"><img src="/static/images/register_images/wechat-pic.png">
 				<dl>
 					<dt>七加二商城</dt>
 					<dt>APP下载</dt>
 					<dd>注册送5元</dd>
 				</dl></a></li>
-				<li><a href="index.html"><img src="/images/register_images/wechat-pic.png">
+				<li><a href="index.html"><img src="/static/images/register_images/wechat-pic.png">
 				<dl>
 					<dt>七加二</dt>
 					<dt>官方微信</dt>
@@ -205,7 +206,7 @@
 			</ul>
 			</div>
 			<div class="fxdc_right">
-				<img src="/images/register_images/icon_24.png" />
+				<img src="/static/images/register_images/icon_24.png" />
 			</div>
 		</div>
 	</body>

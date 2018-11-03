@@ -53,7 +53,7 @@
                         <li><a href="#">我的优惠卷<span><img src="/static/images/index_images/register/right.png"/></span></a>
                         </li>
                         <li><a href="#">我是卖家<span><img src="/static/images/index_images/register/right.png"/></span></a></li>
-                    </ul>
+                    </ul>a
                 </li>
                 <li><a href="mycat.html"><span><img class="ol" src="/static/images/index_images/register/cart.png"/></span>购物车
                     0</a></li>
@@ -882,12 +882,21 @@
                 <!--<li><a href="#"><img src="images/index_images/nav/pic1.jpg"/></a></li>
                 <li><a href="#"><img src="images/index_images/nav/pic2.jpg"/></a></li>
                 <li><a href="#"><img src="images/index_images/nav/pic3.jpg"/></a></li>-->
+
+                {% for wheel in wheels %}
+                    <li>
+                        <a href="#"><img src="{{ wheel.img }}" alt=""></a>
+                        <a href="#"><img src="/static/images/index_images/nav/pic1.jpg"/></a>
+                    </li>
+                {% endfor %}
+
             </ul>
             <div class="box6">
                 <ul id="list6">
                     <!--<li></li>
                     <li></li>
-                    <li></li>					-->
+                    <li></li>-->
+
                 </ul>
             </div>
         </div>
@@ -2728,6 +2737,7 @@
 
 
 </a>
+<script src="lunbo.js"></script>
 
 </body>
 </html>
