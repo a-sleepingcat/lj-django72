@@ -8,10 +8,9 @@
     <link rel="stylesheet" type="text/css" href="/static/css/index_css/index.css"/>
     <script src="/static/js/index_js/move3.js"></script>
     <script src="/static/js/index_js/ajax.js"></script>
-    <script src="/static/js/index_js/index.js"></script>
+{#    <script src="/static/js/index_js/index.js"></script>#}
     <script src="/static/js/index_js/jquery-1.12.3.js"></script>
     <script src="/static/js/elevator.js"></script>
-
 </head>
 <body>
 
@@ -878,7 +877,7 @@
             </ul>
         </div>
         <div class="lunbo_center" id="box5">
-            <ul id="list5">
+            <ul id="list5" >
                 <!--<li><a href="#"><img src="images/index_images/nav/pic1.jpg"/></a></li>
                 <li><a href="#"><img src="images/index_images/nav/pic2.jpg"/></a></li>
                 <li><a href="#"><img src="images/index_images/nav/pic3.jpg"/></a></li>-->
@@ -886,16 +885,15 @@
                 {% for wheel in wheels %}
                     <li>
                         <a href="#"><img src="{{ wheel.img }}" alt=""></a>
-                        <a href="#"><img src="/static/images/index_images/nav/pic1.jpg"/></a>
                     </li>
                 {% endfor %}
 
             </ul>
             <div class="box6">
                 <ul id="list6">
-                    <!--<li></li>
                     <li></li>
-                    <li></li>-->
+                    <li></li>
+                    <li></li>
 
                 </ul>
             </div>
@@ -2735,9 +2733,7 @@
         <li>5F<span>运动</span></li>
     </ul>
 
-
 </a>
-<script src="lunbo.js"></script>
-
 </body>
+<script src="/static/js/index_js/index.js"></script>
 </html>

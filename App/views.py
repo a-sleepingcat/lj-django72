@@ -28,7 +28,7 @@ def index(request):
         data['username'] = user.username
         return render(request,'index.html', context=data)
     else:
-        return render(request,'index.html')
+        return render(request,'index.html',context=data)
 
 
 
@@ -80,7 +80,7 @@ def register(request):
             #重定向
             response = redirect('app:index')
            #uuid获取不同的token，用户名才会覆盖
-            user.token = uuid.uuid5(uuid.uuid4(), 'register')
+            # user.token = uuid.uuid5(uuid.uuid4(), 'register')
             # 设置cookie
             # response.set_cookie('username',username)
             response.set_cookie('token', user.token)
@@ -88,7 +88,7 @@ def register(request):
             return response
         else: #不存在
             return HttpResponse('用户名或密码错误')
-
+            # return render(request,'register.html')
 #退出登陆
 def logout(request):
     response = redirect('app:index')
