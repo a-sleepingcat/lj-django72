@@ -7,16 +7,22 @@ from django.shortcuts import render, redirect
 # Create your views here.
 
 # 首页
-from App.models import User, Wheel
+from App.models import User, Wheel, Goods
 
 
 # 首页
 def index(request):
     #轮播图
     wheels = Wheel.objects.all()
+
+    # 插入商品
+    goods = Goods.objects.all()
+
+
     data = {
         'wheels' : wheels,
-        'username': ''
+        'username': '',
+        'goods':goods
     }
     #状态保持-获取session
     # username = request.session.get('username')

@@ -14,3 +14,26 @@ class User(models.Model):
 class Wheel(models.Model):
     #图片名称
     img = models.CharField(max_length=100, )
+
+
+# 商品详情
+class Goods(models.Model):
+    name = models.CharField(max_length=256)
+    price = models.CharField(max_length=30)
+    detail = models.CharField(max_length=256,default='')
+    unit = models.CharField(max_length=10)
+    headImg = models.CharField(max_length=120)
+    img1 = models.CharField(max_length=120)
+    img2 = models.CharField(max_length=120)
+    img3 = models.CharField(max_length=120)
+    img4 = models.CharField(max_length=120)
+    img5 = models.CharField(max_length=120)
+    img6 = models.CharField(max_length=120)
+    img7 = models.CharField(max_length=120)
+    img13 = models.CharField(max_length=120)
+    img19 = models.CharField(max_length=120)
+    img20= models.CharField(max_length=120)
+    total = models.CharField(max_length=100)
+    potol = models.CharField(max_length=100)
+
+

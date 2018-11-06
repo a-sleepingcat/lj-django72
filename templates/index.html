@@ -1441,6 +1441,16 @@
                         <p><a href="#">UTO长裤运动装</a></p>
                         <h5>￥200.00</h5>
                     </li>-->
+{#                        插入商品及主体内容#}
+                    {% for good in goods %}
+                        <li>
+                            <a href=""><img src="{{ good.headImg }}" alt=""></a>
+                            <p><a href="">{{ good.name }}</a></p>
+                            <h5>{{ good.price }}</h5>
+
+                        </li>
+                    {% endfor %}
+
                 </ul>
                 <ul>
                     <li><a href="#"><img

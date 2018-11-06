@@ -1,0 +1,16 @@
+[
+
+	{
+		"id": 1,
+		"img": "../images/index_images/nav/pic1.jpg"
+	},
+	{
+		"id": 2,
+		"img":"../images/index_images/nav/pic2.jpg"
+	},
+	{
+		"id": 3,
+		"img": "../images/index_images/nav/pic3.jpg"
+	}
+	
+]

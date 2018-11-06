@@ -19,6 +19,7 @@
 //     console.log($('body').html())
 // })
 
+
 $(function () {
     $('img').each(function () {
         var imgpath = $(this).attr('src')
