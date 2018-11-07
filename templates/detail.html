@@ -56,7 +56,7 @@
 			<div id="logo">
 				<div class="center">
 					<div class="logo_left">
-						<a href="{% url 'app:index' %}"><img src="{% static '/images/detail_images/201511170959056304.png' %}"></a>
+						<a href="#"><img src="{% static '/images/detail_images/201511170959056304.png' %}"></a>
 					</div>
 					<div class="logo_center" id="lct">
 						<div class="triangle"></div>
@@ -798,7 +798,7 @@
 
 				<div class="nav_right">
 					<ul class="lit1">
-						<li><a href="{% url 'app:index' %}">首页</a></li>
+						<li><a href="#">首页</a></li>
 						<li><a href="#">特卖会</a></li>
 						<li><a href="#">团购</a></li>
 						<li><a href="#">yes!好货</a>
@@ -816,10 +816,15 @@
 		</div>
 		<div id="introduce">
 			<div class="center">
-				<h1>首页 ›男装 ›速干衣裤 ›速干衣 ›UTO(悠途) ›<span id="nam1"></span></h1>
+{#                小标题#}
+				<h1>首页 ›男装 ›速干衣裤 ›速干衣 ›UTO(悠途) ›<span id="nam1">{{ goods.detail }}</span></h1>
 				<div id="box">
-					<div id="middleImg">
-						<img src="{% static '' %}" id="img1">
+{#                    商品详情大图#}
+                    <div id="middleImg">
+{#          <img src="{% static '/images/detail_images/two/two.jpg' %}" alt="" id="img7">#}
+                        
+						<img src="{{ goods.img7 }}">
+
 						<div id="middleArea"></div>
 					</div>
 					<div id="small">
@@ -829,29 +834,43 @@
 						<div id="next_d">
 
 						</div>
+{#                        商品详情小图#}
 						<div id="small_ob">
-							<ul id="aul">
-							<li><img src="{% static '' %}" id="img2"></li>
-							<li><img src="{% static '' %}" id="img3"></li>
-							<li><img src="{% static '' %}" id="img4"></li>
-							<li><img src="{% static '' %}" id="img5"></li>
-							<li><img src="{% static '' %}" id="img6"></li>
-							<li><img src="{% static '' %}" id="img7"></li>
+                            <ul id="aul">
+                                <li><img src="{{ goods.img1 }}" alt=""></li>
+                                <li><img src="{{ goods.img2 }}" alt=""></li>
+                                <li><img src="{{ goods.img3 }}" alt=""></li>
+                                <li><img src="{{ goods.img4 }}" alt=""></li>
+                                <li><img src="{{ goods.img5 }}" alt=""></li>
+                                <li><img src="{{ goods.img6 }}" alt=""></li>
+{#							<li><img src="{% static '/images/detail_images/two/1_1.jpeg' %}" id="img1"></li>#}
+{#							<li><img src="{% static '/images/detail_images/two/1_2.jpeg' %}" id="img2"></li>#}
+{#							<li><img src="{% static '/images/detail_images/two/1_3.jpeg' %}" id="img3"></li>#}
+{#							<li><img src="{% static '/images/detail_images/two/1_4.jpeg' %}" id="img4"></li>#}
+{#							<li><img src="{% static '/images/detail_images/two/1_5.jpeg' %}" id="img5"></li>#}
+{#							<li><img src="{% static '/images/detail_images/two/1_6.jpeg' %}" id="img6"></li>#}
 
 							</ul>
 						</div>
 
 					</div>
+{#                    扫描大图显示的图片#}
 					<div id="bigArea">
-						<img id="bigImg" src="{% static '' %}">
+                        <img id="bigImg" src="{{ goods.img13 }}">
+{#						<img id="bigImg" src="{% static '' %}">#}
 					</div>
 					<div id="rollArea">
-						<h2 id="nam5"></h2>
-						<p>购物返积分 <span id="nam2"> </span>起|点评送积分<span id="nam3"></span>| 商品评论 <span>0 </span></p>
+{#                 图片名字       #}
+						<h2 id="nam5">
+                            {{ goods.detail }}
+                        </h2>
+{#                        积分#}
+						<p>购物返积分 <span id="nam2">{{ goods.total }} </span>起|点评送积分<span id="nam3"> {{ goods.potol }}</span>| 商品评论 <span>0 </span></p>
 						<div class="tuanit-l"></div>
 						<div class="tuanit-r"></div>
+{#                        价格#}
 						<div id="sall">
-							<p>会员价：<span id="nam4"></span></p>
+							<p>会员价：<span id="nam4">{{ goods.unit }} {{ goods.price }}</span></p>
 							<dl>
 								<dt>商品评价</dt>
 								<dd>0</dd>
@@ -970,16 +989,18 @@
 							<li>商品评论 (0)</li>
 							<li>产品咨询</li>
 						</ul>
-
+                    {#商品详情介绍的文字#}
 						<div class="ap">
-							<img src="{% static '' %}" id="img8">
+							<img src="{{ goods.img19 }}" id="img8">
 						</div>
 						<div class="ap"><img src="{% static '/images/detail_images/pic1-1.png' %}"></div>
 						<div class="ap"><img src="{% static '/images/detail_images/pic-3.png' %}"></div>
 					</div>
 
 					<div id="doll_b">
-						<img src="{% static '' %}" id="img9" class="ad">
+{#                        商品详情评论下的大图#}
+                        <img src="{{ goods.img20 }}" id="img9" class="ad">
+{#						<img src="{% static '' %}" id="img9" class="ad">#}
 						<img src="{% static '/images/detail_images/pic1-2.png' %}" class="ad">
 						<img src="{% static '/images/detail_images/cm.gif' %}" class="ad">
 					</div>

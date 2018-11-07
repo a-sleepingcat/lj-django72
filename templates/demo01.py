@@ -1,3 +1,4 @@
+# 脚本，插入图片数据
 import pymysql
 db=pymysql.connect('localhost','root','123456','ljdjango72') #改自己的主机名，用户名，密码，数据库名
 cursor=db.cursor()

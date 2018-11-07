@@ -19,6 +19,7 @@ def index(request):
     goods = Goods.objects.all()
 
 
+
     data = {
         'wheels' : wheels,
         'username': '',
@@ -111,8 +112,13 @@ def generate_password(password):
 
 
 #商品详情
-def detail(request):
-    return render(request,'detail.html')
+def detail(request,id):
+    goods = Goods.objects.all()[int(id)-1]
+    print(goods)
+    data = {
+        'goods':goods,
+    }
+    return render(request,'detail.html',context=data)
 
 #购物车
 def mycat(request):

@@ -33,14 +33,14 @@
                     {% if username %}
                         <h1>用户：{{ username }}</h1>
                     {% else %}
-                        <p><a href="/register/">登陆</a></p>
+                        <p><a href="{% url 'app:register' %}">登陆</a></p>
                     {% endif %}
                 </li>
 
             <ul id="list1">
 
 {#                <li><a href="/register/">登录</a></li>#}
-                <li><a href="/login/">注册</a></li>
+                <li><a href="{% url 'app:login' %}">注册</a></li>
                 <li><a href="{% url "app:logout" %}">退出登录</a></li>
             </ul>
             <ul id="list2">
@@ -876,6 +876,7 @@
 
             </ul>
         </div>
+{#    轮播图#}
         <div class="lunbo_center" id="box5">
             <ul id="list5" >
                 <!--<li><a href="#"><img src="images/index_images/nav/pic1.jpg"/></a></li>
@@ -884,7 +885,7 @@
 
                 {% for wheel in wheels %}
                     <li>
-                        <a href="#"><img src="{{ wheel.img }}" alt=""></a>
+                        <a href="{% url 'app:index' %}"><img src="{{ wheel.img }}" alt=""></a>
                     </li>
                 {% endfor %}
 
@@ -1441,12 +1442,14 @@
                         <p><a href="#">UTO长裤运动装</a></p>
                         <h5>￥200.00</h5>
                     </li>-->
+
 {#                        插入商品及主体内容#}
                     {% for good in goods %}
                         <li>
-                            <a href=""><img src="{{ good.headImg }}" alt=""></a>
-                            <p><a href="">{{ good.name }}</a></p>
+                            <a href="{% url 'app:detail'  good.id %}"><img src="{{ good.headImg }}" alt=""></a>
+                            <p><a href="{% url 'app:detail' good.id%}">{{ good.name }}</a></p>
                             <h5>{{ good.price }}</h5>
+
 
                         </li>
                     {% endfor %}
