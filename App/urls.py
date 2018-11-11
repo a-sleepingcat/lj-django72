@@ -8,7 +8,9 @@ urlpatterns = [
     url(r'^register/$',views.register,name='register'), #登陆
     url(r'^logout/$',views.logout,name="logout"), #退出登陆
     url(r'^detail/(\d+)/$',views.detail,name='detail'),#商品详情
-    url(r'^mycat/$',views.mycat,name='mycat') #购物车
+    url(r'^mycat/$',views.mycat,name='mycat'), #购物车
+
+    url(r'^checkname/$',views.checkname,name='checkname') #用户名验证
 ]
 
 

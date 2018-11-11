@@ -21,10 +21,10 @@
 <div id="pgty">
     <div class="center">
 {#       注册#}
-        <form action="/login/" method="post">
+        <form action="{% url 'app:login' %}" method="post">
             {% csrf_token %}
             <ul>
-                <li><a href="/register/">会员登录</a></li>
+                <li><a href="{% url 'app:register' %}">会员登录</a></li>
                 <li><a href="#">会员注册</a></li>
             </ul>
             <div class="form_center">

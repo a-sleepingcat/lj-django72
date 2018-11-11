@@ -41,7 +41,12 @@
 
 {#                <li><a href="/register/">登录</a></li>#}
                 <li><a href="{% url 'app:login' %}">注册</a></li>
-                <li><a href="{% url "app:logout" %}">退出登录</a></li>
+                {% if isLogin %}
+                    <li class="quit">
+                        <a href="{% url 'app:logout' %}">退出登陆</a>
+                    </li>
+                {% endif %}
+{#                <li><a href="{% url "app:logout" %}">退出登录</a></li>#}
             </ul>
             <ul id="list2">
                 <li class="da"><a style="padding-left: 20px;" href="#">我的七加二<span><img

@@ -67,6 +67,9 @@ $(function(){
         }
 		
 	})
-	
+	$('#txt input').focus(function () {
+		$('#userer').hide()
+		$('#userers').hide()
+    })
 
 })
